@@ -3,12 +3,15 @@ function scrollAdd() {
     window.scrollBy(0, window.innerHeight);
 }
 
-const observer = new IntersectionObserver(entires => {
-    for(let el of entires) {
-        if(el.isIntersecting) {
-            el.classList.add("._intersection_active")
-        }
-    }
-});
+// Observer
+const observer = new IntersectionObserver(entries => {
 
-observer.observe(document.querySelectorAll("._intersection"))
+    entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+        entry.target.classList.add('_intersection_active');
+        }
+    });
+}, {rootMargin: '0, 500px'});
+
+observer.observe(document.querySelectorAll("._intersection"));
