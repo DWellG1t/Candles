@@ -1,2 +1,33 @@
 @import "vars.scss";
 
+.footer {
+    height: 300px;
+    color: white;
+
+    background: -webkit-linear-gradient(171deg, #393939,#0b0b0b);
+    background: linear-gradient(171deg, #393939,#0b0b0b);
+}
+.footer__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer__logo {
+    font-size: 8.2rem;
+    margin-bottom: 30px;
+    color: black;
+}
+.footer__datalist {
+    text-align: center;
+    li {
+        font-size: 1.5rem;
+        margin-bottom: 3px;
+    }
+    li:nth-child(1) {
+        font-size: 2.1rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+}

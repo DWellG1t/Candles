@@ -7,11 +7,12 @@ function scrollAdd() {
 const observer = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
-
     if (entry.isIntersecting) {
-        entry.target.classList.add('_intersection_active');
+        entry.target.classList.add('_intersection');
         }
     });
-}, {rootMargin: '0, 500px'});
+}, {rootMargin: "-30px"});
 
-observer.observe(document.querySelectorAll("._intersection"));
+observer.observe(document.querySelector("#about"));
+observer.observe(document.querySelector("#picture"));
+observer.observe(document.querySelector("#shop"));

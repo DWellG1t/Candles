@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 html {
     font-size: 10px;
-    font-family:  roboto, 'Courier New', Courier, monospace !important;
+    font-family:  alegreya, roboto, 'Courier New', Courier, monospace !important;
     scroll-behavior: smooth;
 }
 
@@ -32,7 +32,7 @@ html {
 }
 
 ._container {
-    max-width: 1076px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -65,7 +65,11 @@ html {
     transition: ease 0.3s;
     &:hover {
         transform: translate(0, -10px) scale(1.2, 1.2);
-        box-shadow: 0 10px 20px black;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 
     }
+}
+
+a {
+    color: inherit;
 }

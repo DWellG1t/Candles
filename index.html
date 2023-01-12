@@ -18,6 +18,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script:regular,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
 </head>
 <body>
     <div class="_wrapper">
@@ -28,6 +29,15 @@
 
         <!-- Main -->
         <main class="main">
+            <!-- contact -->
+            <div class="contact">
+                <div class="contact__phone">
+                    <a href="tel:+79775918292"><i class="fa-solid fa-phone"></i></a>
+                </div>
+                <div class="contact__email">
+                    <a href="mailto:gm.dat.well@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
 
             <!-- section-first -->
             <section class="section-first">
@@ -51,7 +61,7 @@
             </section>
 
             <!-- about -->
-            <section class="section-about _section _intersection">
+            <section class="section-about _section" id="about">
                 <div class="section-about__container _container">
                     <p class="section-about__text">
                         <span class="section-about__text_comp">MarsAlla Сandles&Spa</span> — это уникальные ароматические свечи и косметика ручной работы. Вся наша продукция изготовлена 
@@ -59,13 +69,31 @@
                         Именно поэтому мы сотрудничаем только с проверенными поставщиками.
                     </p>
                 </div>
+                <div class="section-about__toPic" onclick="scrollAdd()">Контакты</div>
             </section>
 
-            <!-- section-picture -->
-            <section class="section-picture"></section>
+            <!-- section-picture (contacts) -->
+            <section class="section-picture" id="picture">
+                <div class="section-picture__container _container">
+                    <p class="section-picture__phone"><a href="tel:+79775918292">+7 (977) 591-82-92</a></p>
+                    <p class="section-picture__email"><a href="mailto:gm.dat.well@gmail.com">gm.dat.well@gmail.com</a></p> 
+                    <div class="section-picture__social">
+                        <div class="section-picture__social_vk">
+                            <i class="fa-brands fa-vk"><a href=""></a></i>
+                        </div>
+                        <div class="section-picture__social_inst">
+                            <i class="fa-brands fa-square-instagram"><a href="" class=""></a></i>
+                        </div>
+                        <div class="section-picture__social_telegramm">
+                            <i class="fa-brands fa-telegram"><a href=""></a></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-picture__toShop" onclick="scrollAdd()">Изделия</div> 
+            </section>
             
             <!-- section-shop -->
-            <section class="section-shop _section">
+            <section class="section-shop _section" id="shop">
                 <div class="section-shop__container _container">
 
                     <h1 class="section-shop__head">Изделия</h1>
@@ -73,10 +101,10 @@
                     <div class="section-shop__cards">
                         <div class="section-shop__card">
                             <div class="section-shop__img _ibg">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Candle-flame-and-reflection.jpg/1200px-Candle-flame-and-reflection.jpg" alt="">
+                                <img src="https://cdn.lmbd.ru/25613d2b-4155-42f7-aed6-ee76b951ab70/" alt="">
                             </div>
                             <div class="section-shop__text">
-                                <h1 class="section-shop__title">Свеча губа</h1>
+                                <h1 class="section-shop__title">Свеча №1</h1>
                                 <p class="section-shop__desc">Из смеси растительных восков</p>
                                 <p class="section-shop__price">750 р.</p>
                             </div>
@@ -87,7 +115,7 @@
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Candle-flame-and-reflection.jpg/1200px-Candle-flame-and-reflection.jpg" alt="">
                             </div>
                             <div class="section-shop__text">
-                                <h1 class="section-shop__title">Свеча губа</h1>
+                                <h1 class="section-shop__title">Свеча №2</h1>
                                 <p class="section-shop__desc">Из смеси растительных восков</p>
                                 <p class="section-shop__price">750 р.</p>
                             </div>
@@ -98,12 +126,16 @@
                                 <img src="https://www.svecha69.ru/wp-content/uploads/2021/09/IMG_5280-scaled.jpg" alt="">
                             </div>
                             <div class="section-shop__text">
-                                <h1 class="section-shop__title">Свеча губа</h1>
+                                <h1 class="section-shop__title">Свеча №3</h1>
                                 <p class="section-shop__desc">Из смеси растительных восков</p>
                                 <p class="section-shop__price">750 р.</p>
                             </div>
                         </div>
                     </div>
+
+                    <button class="section-shop__order _button">
+                        сделать заказ
+                    </button>
                 </div>
             </section>
 
@@ -113,10 +145,24 @@
 
         <!-- Footer -->
         <footer class="footer">
-
+            <div class="footer__container _container">
+                <div class="footer__logo">
+                    <i class="fa-brands fa-slack"></i>
+                </div>
+                <ul class="footer__datalist">
+                    <li>Жукавин Денис Васильевич</li>
+                    <li>ИНН: 0204102401204</li>
+                    <li>Контактный телефон: <a href="tel:+79775918292">+7 (977) 591-82-92</a></li>
+                    <li>Адрес: г. Москва, ул. Пушкинская, д.7</li>
+                    <li></li>
+                </ul>
+            </div>
         </footer>
+
     </div>
 
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/e31710bf47.js" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
