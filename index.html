@@ -31,12 +31,31 @@
         <main class="main">
             <!-- contact -->
             <div class="contact">
-                <div class="contact__phone">
-                    <a href="tel:+79775918292"><i class="fa-solid fa-phone"></i></a>
+                <div class="contact__box">
+                    <div class="contact__box_burger">
+                        <span></span>
+                    </div>
                 </div>
-                <div class="contact__email">
-                    <a href="mailto:gm.dat.well@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                </div>
+
+                <nav class="contact__menu">
+                    <ul class="contact__list">
+                        <li>
+                            <a href=""><i class="fa-solid fa-phone"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-solid fa-envelope"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-telegram"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-vk"></i></a>
+                        </li>
+                    </ul>
+                </nav>    
             </div>
 
             <!-- section-first -->
@@ -47,7 +66,7 @@
                         <h1 class="section-first__title">
                             <span>СВЕЧИ</span> и <span>АРОМАТЫ</span> для дома ручной работы
                         </h1>
-                        <button class="first-section__button _button" onclick="scrollAdd()">
+                        <button class="first-section__button _button" onclick="scrollAdd(1)">
                             Обо мне
                         </button>
                     </div>
@@ -69,7 +88,7 @@
                         Именно поэтому мы сотрудничаем только с проверенными поставщиками.
                     </p>
                 </div>
-                <div class="section-about__toPic" onclick="scrollAdd()">Контакты</div>
+                <div class="section-about__toPic" onclick="scrollAdd(2)">Контакты</div>
             </section>
 
             <!-- section-picture (contacts) -->
@@ -89,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="section-picture__toShop" onclick="scrollAdd()">Изделия</div> 
+                <div class="section-picture__toShop" onclick="scrollAdd(3)">Изделия</div> 
             </section>
             
             <!-- section-shop -->
@@ -98,10 +117,21 @@
 
                     <h1 class="section-shop__head">Изделия</h1>
 
-                    <div class="section-shop__cards">
+                    <nav class="section-shop__nav">
+                        <ul class="section-shop__menu">
+                            <li class="_active" id="candle">Свечи</li>
+                            <li id="bomb">Бомбы</li>
+                            <li>другое</li>
+                            <li>другое</li>
+                            <li>другое</li>
+                        </ul>
+                    </nav>
+
+                    <!-- candles -->
+                    <div class="section-shop__cards section-shop__cards_candles _active">
                         <div class="section-shop__card">
                             <div class="section-shop__img _ibg">
-                                <img src="https://cdn.lmbd.ru/25613d2b-4155-42f7-aed6-ee76b951ab70/" alt="">
+                                <img src="./img/jpeg/1.webp" alt="">
                             </div>
                             <div class="section-shop__text">
                                 <h1 class="section-shop__title">Свеча №1</h1>
@@ -112,7 +142,7 @@
 
                         <div class="section-shop__card">
                             <div class="section-shop__img _ibg">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Candle-flame-and-reflection.jpg/1200px-Candle-flame-and-reflection.jpg" alt="">
+                                <img src="./img/jpeg/2.jpg" alt="">
                             </div>
                             <div class="section-shop__text">
                                 <h1 class="section-shop__title">Свеча №2</h1>
@@ -123,7 +153,7 @@
 
                         <div class="section-shop__card">
                             <div class="section-shop__img _ibg">
-                                <img src="https://www.svecha69.ru/wp-content/uploads/2021/09/IMG_5280-scaled.jpg" alt="">
+                                <img src="./img/jpeg/3.jpg" alt="">
                             </div>
                             <div class="section-shop__text">
                                 <h1 class="section-shop__title">Свеча №3</h1>
@@ -131,15 +161,95 @@
                                 <p class="section-shop__price">750 р.</p>
                             </div>
                         </div>
+
+                        <div class="section-shop__card">
+                            <div class="section-shop__img _ibg">
+                                <img src="./img/jpeg/4.jpg" alt="">
+                            </div>
+                            <div class="section-shop__text">
+                                <h1 class="section-shop__title">Свеча №4</h1>
+                                <p class="section-shop__desc">Из смеси растительных восков</p>
+                                <p class="section-shop__price">750 р.</p>
+                            </div>
+                        </div>
+
+                        <div class="section-shop__card">
+                            <div class="section-shop__img _ibg">
+                                <img src="./img/jpeg/5.jpg" alt="">
+                            </div>
+                            <div class="section-shop__text">
+                                <h1 class="section-shop__title">Свеча №5</h1>
+                                <p class="section-shop__desc">Из смеси растительных восков</p>
+                                <p class="section-shop__price">750 р.</p>
+                            </div>
+                        </div>
+
+                        <div class="section-shop__card">
+                            <div class="section-shop__img _ibg">
+                                <img src="./img/jpeg/Apple-Blue-Clover-svechi-Voluspa.jpg" alt="">
+                            </div>
+                            <div class="section-shop__text">
+                                <h1 class="section-shop__title">Свеча №6</h1>
+                                <p class="section-shop__desc">Из смеси растительных восков</p>
+                                <p class="section-shop__price">750 р.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- bombs -->
+                    <div class="section-shop__cards section-shop__cards_bombs">
+                        <div class="section-shop__card">
+                            <div class="section-shop__img _ibg">
+                                <img src="./img/jpeg/b1.jpg" alt="">
+                            </div>
+                            <div class="section-shop__text">
+                                <h1 class="section-shop__title">Бомба №1</h1>
+                                <p class="section-shop__desc">Из смеси растительных восков</p>
+                                <p class="section-shop__price">750 р.</p>
+                            </div>
+                        </div>
+
+                        <div class="section-shop__card">
+                            <div class="section-shop__img _ibg">
+                                <img src="./img/jpeg/b2.jpg" alt="">
+                            </div>
+                            <div class="section-shop__text">
+                                <h1 class="section-shop__title">Бомба №2</h1>
+                                <p class="section-shop__desc">Из смеси растительных восков</p>
+                                <p class="section-shop__price">750 р.</p>
+                            </div>
+                        </div>
+
+                        <div class="section-shop__card">
+                            <div class="section-shop__img _ibg">
+                                <img src="./img/jpeg/b3.jpeg" alt="">
+                            </div>
+                            <div class="section-shop__text">
+                                <h1 class="section-shop__title">Бомба №3</h1>
+                                <p class="section-shop__desc">Из смеси растительных восков</p>
+                                <p class="section-shop__price">750 р.</p>
+                            </div>
+                        </div>
+
+
                     </div>
 
                     <button class="section-shop__order _button">
-                        сделать заказ
+                        Сделать заказ
                     </button>
                 </div>
+
+                <!-- modal -->
+                <!-- <div class="section-shop__modal">
+                    <form action="" method="post" class="section-shop__form">
+                        p.section-shop__name
+                    </form>
+                </div> -->
+
             </section>
 
-            <!-- section-contacts -->
+
 
         </main>
 
@@ -147,10 +257,10 @@
         <footer class="footer">
             <div class="footer__container _container">
                 <div class="footer__logo">
-                    <i class="fa-brands fa-slack"></i>
+                    <a href="/"><i class="fa-brands fa-slack"></i></a>
                 </div>
                 <ul class="footer__datalist">
-                    <li>Жукавин Денис Васильевич</li>
+                    <li>Фамилия Елизавета Отчество</li>
                     <li>ИНН: 0204102401204</li>
                     <li>Контактный телефон: <a href="tel:+79775918292">+7 (977) 591-82-92</a></li>
                     <li>Адрес: г. Москва, ул. Пушкинская, д.7</li>
