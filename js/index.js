@@ -26,6 +26,17 @@ document.querySelector("body").classList.add("_mobile");
 document.querySelector("body").classList.add("_desk");
 }
 
+// heights
+// function setHeight() {
+//     const firstSection = document.querySelector(".section-first");
+//     const aboutSection = document.querySelector(".section-about");
+
+//     firstSection.style.height = window.innerHeight + 'px';
+//     aboutSection.style.height = window.innerHeight + 'px';
+
+// }
+// setHeight();
+
 // burger 
 const burger = document.querySelector(".contact__box_burger");
 const nav = document.querySelector(".contact");

@@ -148,11 +148,12 @@ html {
   transition: ease 0.3s;
   background: -webkit-linear-gradient(90deg, #ffddbf, #ffc797, #ffb575);
   background: linear-gradient(90deg, #ffddbf, #ffc797, #ffb575); }
-  ._button:hover {
-    transform: translate(0, -10px) scale(1.2, 1.2) skew(3deg, 3deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    background: -webkit-linear-gradient(90deg, #ffddbf, #ffc797, #ffb575);
-    background: linear-gradient(90deg, #ffddbf, #ffc797, #ffb575); }
+
+._desk ._button:hover {
+  transform: translate(0, -10px) scale(1.2, 1.2) skew(3deg, 3deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  background: -webkit-linear-gradient(90deg, #ffddbf, #ffc797, #ffb575);
+  background: linear-gradient(90deg, #ffddbf, #ffc797, #ffb575); }
 
 a {
   color: inherit; }
@@ -196,8 +197,6 @@ a {
   height: 20px;
   cursor: pointer;
   position: relative; }
-  .contact__box_burger:hover span, .contact__box_burger:hover::before, .contact__box_burger:hover::after {
-    background-color: #ffc592; }
   .contact__box_burger span, .contact__box_burger:before, .contact__box_burger:after {
     position: absolute;
     width: 100%;
@@ -213,6 +212,9 @@ a {
     top: 0; }
   .contact__box_burger:after {
     bottom: 0; }
+
+._desk .contact__box_burger:hover span, ._desk .contact__box_burger:hover::before, ._desk .contact__box_burger:hover::after {
+  background-color: #ffc592; }
 
 .contact__box_burger._active span, .contact__box_burger._active:before {
   top: 50%;
@@ -238,9 +240,10 @@ a {
   .contact__list li {
     text-shadow: 0 0 10px black;
     transition: 0.3s ease; }
-  .contact__list li:hover {
-    color: #ffc592;
-    transform: translate(0, -5px) scale(1.1, 1.1); }
+
+._desk .contact__list li:hover {
+  color: #ffc592;
+  transform: translate(0, -5px) scale(1.1, 1.1); }
 
 .section-first {
   height: 100vh;
@@ -315,11 +318,15 @@ a {
     position: relative;
     left: 50%;
     transition: ease 0.3s; }
-  .section-about__toPic:hover {
-    transform: translate(-50%, -80px) scale(2, 2);
-    color: #ffc592; }
-    .section-about__toPic:hover::after {
-      height: 0; }
+
+._mobile .section-about__toPic::after {
+  animation: ease strokeDecrease 1s alternate infinite; }
+
+._desk .section-about__toPic:hover {
+  transform: translate(-50%, -80px) scale(2, 2);
+  color: #ffc592; }
+  ._desk .section-about__toPic:hover::after {
+    height: 0; }
 
 .section-about._intersection_active .section-about__container {
   transform: translate(0, 0); }
@@ -375,11 +382,15 @@ a {
     position: relative;
     left: 50%;
     transition: ease 0.3s; }
-  .section-picture__toShop:hover {
-    transform: translate(-50%, -80px) scale(2, 2);
-    color: #ffc592; }
-    .section-picture__toShop:hover::after {
-      height: 0; }
+
+._mobile .section-picture__toShop::after {
+  animation: ease strokeDecrease 1s alternate infinite; }
+
+._desk .section-picture__toShop:hover {
+  transform: translate(-50%, -80px) scale(2, 2);
+  color: #ffc592; }
+  ._desk .section-picture__toShop:hover::after {
+    height: 0; }
 
 .section-picture__container {
   height: 100%;
@@ -396,18 +407,20 @@ a {
   margin-bottom: 30px;
   font-weight: 500;
   transition: ease 0.3s; }
-  .section-picture__phone:hover {
-    color: #ffc592;
-    transform: translate(0, -10px) scale(1.1, 1.1); }
+
+._desk .section-picture__phone:hover {
+  color: #ffc592;
+  transform: translate(0, -10px) scale(1.1, 1.1); }
 
 .section-picture__email {
   font-size: 5.2rem;
   margin-bottom: 100px;
   font-weight: 500;
   transition: ease 0.3s; }
-  .section-picture__email:hover {
-    color: #ffc592;
-    transform: translate(0, -10px) scale(1.1, 1.1); }
+
+._desk .section-picture__email:hover {
+  color: #ffc592;
+  transform: translate(0, -10px) scale(1.1, 1.1); }
 
 .section-picture__social {
   color: white;
@@ -420,9 +433,10 @@ a {
   .section-picture__social div {
     cursor: pointer;
     transition: ease 0.3s; }
-    .section-picture__social div:hover {
-      color: #ffc592;
-      transform: translate(0, -10px) scale(1.1, 1.1); }
+
+._desk .section-picture__social div:hover {
+  color: #ffc592;
+  transform: translate(0, -10px) scale(1.1, 1.1); }
 
 .section-shop {
   box-shadow: 0 -30px 30px rgba(0, 0, 0, 0.7);
@@ -470,9 +484,6 @@ a {
     position: relative;
     transition: 0.3s ease;
     cursor: pointer; }
-    .section-shop__menu li:hover {
-      transform: scale(1.2, 1.2);
-      color: #ffc592; }
     .section-shop__menu li:after {
       content: "";
       display: block;
@@ -484,10 +495,15 @@ a {
       opacity: 0;
       transition: 0.3s ease;
       width: 0; }
-    .section-shop__menu li:hover:after {
-      opacity: 1;
-      background-color: #ffc592;
-      width: 100%; }
+
+._desk .section-shop__menu li:hover {
+  transform: scale(1.2, 1.2);
+  color: #ffc592; }
+
+._desk .section-shop__menu li:hover:after {
+  background-color: #ffc592;
+  opacity: 1;
+  width: 100%; }
 
 .section-shop__container {
   box-sizing: content-box;
@@ -519,9 +535,6 @@ a {
     color: white;
     z-index: 10;
     transition: ease 0.3s; }
-  .section-shop__cards._active .section-shop__card:hover::after {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.3, 1.3); }
   .section-shop__cards._active .section-shop__card::before {
     content: "";
     display: block;
@@ -532,7 +545,16 @@ a {
     background: black;
     opacity: 0;
     transition: ease 0.3s; }
-  .section-shop__cards._active .section-shop__card:hover::before {
+
+._desk .section-shop__cards._active .section-shop__card {
+  cursor: pointer; }
+  ._desk .section-shop__cards._active .section-shop__card:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3, 1.3); }
+  ._desk .section-shop__cards._active .section-shop__card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translate(0, -20px); }
+  ._desk .section-shop__cards._active .section-shop__card:hover::before {
     opacity: 0.2; }
 
 .section-shop__card {
@@ -548,9 +570,6 @@ a {
   margin: 0 10px 10px 0;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1); }
-  .section-shop__card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    transform: translate(0, -20px); }
 
 .section-shop__img {
   height: 600px;
@@ -587,13 +606,12 @@ a {
   animation: gradientFlow ease 1.5s infinite alternate; }
 
 .section-info {
-  background: -webkit-linear-gradient(171deg, #393939, #0b0b0b);
-  background: linear-gradient(171deg, #393939, #0b0b0b);
+  background: url("/img/svg/candle.svg") no-repeat center center, linear-gradient(171deg, #393939, #0b0b0b);
   box-shadow: 0 -30px 30px rgba(0, 0, 0, 0.7);
   position: relative; }
 
 .section-info__container {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -631,8 +649,6 @@ a {
   height: 25px;
   position: relative;
   cursor: pointer; }
-  .section-info__cross:hover::before, .section-info__cross:hover::after {
-    background-color: #ffc592; }
   .section-info__cross::before, .section-info__cross::after {
     content: "";
     width: 100%;
@@ -646,6 +662,9 @@ a {
     transform: translate(0, -50%) rotate(90deg); }
   .section-info__cross::after {
     transform: translate(0, -50%); }
+
+._desk .section-info__cross:hover::before, ._desk .section-info__cross:hover::after {
+  background-color: #ffc592; }
 
 .section-info__cross._active::before {
   transform: translate(0, -50%) rotate(45deg); }
@@ -673,11 +692,15 @@ a {
     position: relative;
     left: 50%;
     transition: ease 0.3s; }
-  .section-info__toShopV2:hover {
-    transform: translate(-50%, -80px) scale(2, 2);
-    color: #ffc592; }
-    .section-info__toShopV2:hover::after {
-      height: 0; }
+
+._mobile .section-info__toShopV2::after {
+  animation: ease strokeDecrease 1s alternate infinite; }
+
+._desk .section-info__toShopV2:hover {
+  transform: translate(-50%, -80px) scale(2, 2);
+  color: #ffc592; }
+  ._desk .section-info__toShopV2:hover::after {
+    height: 0; }
 
 @keyframes buttonSplice {
   from {
@@ -720,6 +743,12 @@ a {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+@keyframes strokeDecrease {
+  from {
+    height: 60px; }
+  to {
+    height: 30px; } }
 
 @media (max-width: 1150px) {
   .section-shop__cards {

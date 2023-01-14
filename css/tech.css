@@ -111,11 +111,12 @@ html {
   transition: ease 0.3s;
   background: -webkit-linear-gradient(90deg, #ffddbf, #ffc797, #ffb575);
   background: linear-gradient(90deg, #ffddbf, #ffc797, #ffb575); }
-  ._button:hover {
-    transform: translate(0, -10px) scale(1.2, 1.2) skew(3deg, 3deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    background: -webkit-linear-gradient(90deg, #ffddbf, #ffc797, #ffb575);
-    background: linear-gradient(90deg, #ffddbf, #ffc797, #ffb575); }
+
+._desk ._button:hover {
+  transform: translate(0, -10px) scale(1.2, 1.2) skew(3deg, 3deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  background: -webkit-linear-gradient(90deg, #ffddbf, #ffc797, #ffb575);
+  background: linear-gradient(90deg, #ffddbf, #ffc797, #ffb575); }
 
 a {
   color: inherit; }

@@ -57,9 +57,9 @@
     cursor: pointer;
     position: relative;
 
-    &:hover span, &:hover::before, &:hover::after {
-        background-color: $font;
-    }
+    // &:hover span, &:hover::before, &:hover::after {
+    //     background-color: $font;
+    // }
 
     span, &:before, &:after {
         position: absolute;
@@ -82,6 +82,13 @@
     &:after {
         bottom: 0;
     }
+}
+
+._desk .contact__box_burger {
+    &:hover span, &:hover::before, &:hover::after {
+        background-color: $font;
+    }
+
 }
 
 .contact__box_burger._active {
@@ -117,14 +124,20 @@
         text-shadow: 0 0 10px rgba(0,0,0,1);
         transition: 0.3s ease;
     }
+    // li:hover {
+    //     color: $font;
+    //     transform: translate(0, -5px) scale(1.1, 1.1);
+
+    // }
+}
+
+._desk .contact__list {
     li:hover {
         color: $font;
         transform: translate(0, -5px) scale(1.1, 1.1);
 
     }
 }
-
-
 
 // section-first 
 .section-first {
@@ -238,6 +251,22 @@
         left: 50%;
         transition: ease 0.3s;
     }
+    // &:hover {
+    //     transform: translate(-50%, -80px) scale(2, 2);
+    //     color: $font;
+    //     &::after { 
+    //         height: 0;
+    //     }
+    // }
+    
+}
+._mobile .section-about__toPic {
+    &::after {
+        animation: ease strokeDecrease 1s alternate infinite;
+    }
+}
+
+._desk .section-about__toPic {
     &:hover {
         transform: translate(-50%, -80px) scale(2, 2);
         color: $font;
@@ -245,7 +274,7 @@
             height: 0;
         }
     }
-    
+
 }
 
 .section-about._intersection_active .section-about__container {
@@ -320,14 +349,28 @@
         left: 50%;
         transition: ease 0.3s;
     }
+    // &:hover {
+    //     transform: translate(-50%, -80px) scale(2, 2);
+    //     color: $font;
+    //     &::after { 
+    //         height: 0;
+    //     }
+    // }
+
+}
+._mobile .section-picture__toShop {
+    &::after {
+        animation: ease strokeDecrease 1s alternate infinite;
+    }
+}
+._desk .section-picture__toShop {
     &:hover {
         transform: translate(-50%, -80px) scale(2, 2);
         color: $font;
         &::after { 
             height: 0;
         }
-    }
-
+    }   
 }
 
 .section-picture__container {
@@ -346,17 +389,31 @@
     margin-bottom: 30px;
     font-weight: 500;
     transition: ease 0.3s;
+    // &:hover {
+    //     color: $font;
+    //     transform: translate(0, -10px) scale(1.1, 1.1);
+    // }
+
+}
+
+._desk .section-picture__phone {
     &:hover {
         color: $font;
         transform: translate(0, -10px) scale(1.1, 1.1);
     }
-
 }
 .section-picture__email {
     font-size: 5.2rem;
     margin-bottom: 100px;
     font-weight: 500;
     transition: ease 0.3s;
+    // &:hover {
+    //     color: $font;
+    //     transform: translate(0, -10px) scale(1.1, 1.1);
+    // }
+}
+
+._desk .section-picture__email {
     &:hover {
         color: $font;
         transform: translate(0, -10px) scale(1.1, 1.1);
@@ -375,11 +432,21 @@
     div {
         cursor: pointer;
         transition: ease 0.3s;
+        // &:hover {
+        //     color: $font;
+        //     transform: translate(0, -10px) scale(1.1, 1.1);
+        // }
+    }
+}
+
+._desk .section-picture__social {
+    div {
         &:hover {
             color: $font;
             transform: translate(0, -10px) scale(1.1, 1.1);
         }
     }
+
 }
 .section-picture__social_vk {
 }
@@ -461,10 +528,10 @@
         position: relative;
         transition: 0.3s ease;
         cursor: pointer;
-        &:hover {
-            transform: scale(1.2, 1.2);
-            color: $font;
-        }
+        // &:hover {
+        //     transform: scale(1.2, 1.2);
+        //     color: $font;
+        // }
 
         &:after {
             content: "";
@@ -479,15 +546,27 @@
             width: 0;
         }
 
-        &:hover:after {
-            opacity: 1;
-            background-color: $font;
-            width: 100%;
-        }
+        // &:hover:after {
+        //     opacity: 1;
+        //     background-color: $font;
+        //     width: 100%;
+        // }
         
     }
-    li a {
 
+}
+
+._desk .section-shop__menu {
+    li {
+        &:hover {
+            transform: scale(1.2, 1.2);
+            color: $font;
+        }
+        &:hover:after {
+            background-color: $font;
+            opacity: 1;
+            width: 100%;   
+        }
     }
 }
 
@@ -525,10 +604,10 @@
             z-index: 10;
             transition: ease 0.3s;
         }
-        &:hover::after {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1.3, 1.3);
-        }
+        // &:hover::after {
+        //     opacity: 1;
+        //     transform: translate(-50%, -50%) scale(1.3, 1.3);
+        // }
         &::before {
             content: "";
             display: block;
@@ -540,10 +619,30 @@
             opacity: 0;
             transition: ease 0.3s;
         }
+        // &:hover::before {
+        //     opacity: 0.2;
+        // }
+
+    }
+}
+
+._desk .section-shop__cards._active 
+{
+    .section-shop__card {
+        cursor: pointer;
+        &:hover::after {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.3, 1.3);
+        }
+
+        &:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            transform: translate(0, -20px);
+        }
+
         &:hover::before {
             opacity: 0.2;
         }
-
     }
 }
 .section-shop__card {
@@ -561,10 +660,10 @@
     margin: 0 10px 10px 0;
     // background-color: azure;
 
-    &:hover {
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-        transform: translate(0, -20px);
-    }
+    // &:hover {
+    //     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    //     transform: translate(0, -20px);
+    // }
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,0.1);
 }
@@ -619,17 +718,16 @@
 
 // section info
 .section-info {
-    background: -webkit-linear-gradient(171deg, #393939,#0b0b0b);
-    background: linear-gradient(171deg, #393939,#0b0b0b);
-
+    // background: -webkit-linear-gradient(171deg, #393939,#0b0b0b);
+    background: url("/img/svg/candle.svg") no-repeat center center, linear-gradient(171deg, #393939,#0b0b0b);
+    
     box-shadow: 0 -30px 30px rgba(0,0,0,0.7);
     position: relative;
 }
 .section-info__container {
     
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
-    
     align-items: flex-start;
     justify-content: center;
     color: white;
@@ -680,9 +778,9 @@
     position: relative;
     cursor: pointer;
 
-    &:hover::before, &:hover::after {
-        background-color: $font;
-    }
+    // &:hover::before, &:hover::after {
+    //     background-color: $font;
+    // }
 
     &::before, &::after {
     content: "";
@@ -700,6 +798,11 @@
     }
     &::after {
         transform: translate(0, -50%)
+    }
+}
+._desk .section-info__cross {
+    &:hover::before, &:hover::after {
+        background-color: $font;
     }
 }
 
@@ -737,13 +840,30 @@
         left: 50%;
         transition: ease 0.3s;
     }
+    // &:hover {
+    //     transform: translate(-50%, -80px) scale(2, 2);
+    //     color: $font;
+    //     &::after { 
+    //         height: 0;
+    //     }
+    // }
+}
+
+._mobile .section-info__toShopV2 {
+    &::after {
+        animation: ease strokeDecrease 1s alternate infinite;
+    }
+}
+._desk .section-info__toShopV2 {
     &:hover {
         transform: translate(-50%, -80px) scale(2, 2);
         color: $font;
         &::after { 
             height: 0;
+            
         }
     }
+
 }
 // Keyframes
 @keyframes buttonSplice {
@@ -808,6 +928,15 @@
     to {
         opacity: 1;
         
+    }
+}
+
+@keyframes strokeDecrease {
+    from {
+        height: 60px;
+    }
+    to {
+        height: 30px;
     }
 }
 
