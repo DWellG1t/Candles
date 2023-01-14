@@ -1,3 +1,31 @@
+// Mobile
+const isMobile = {
+Android: function() {
+    return navigator.userAgent.match(/Android/i);
+},
+BlackBerry: function() {
+    return navigator.userAgent.match(/BlackBerry/i);
+},
+iOS: function() {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+},
+Opera: function() {
+    return navigator.userAgent.match(/Opera Mini/i);
+},
+Windows: function() {
+    return navigator.userAgent.match(/IEMobile/i);
+},
+any: function() {
+    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+}
+};
+
+if (isMobile.any()) {
+document.querySelector("body").classList.add("_mobile");
+} else {
+document.querySelector("body").classList.add("_desk");
+}
+
 // burger 
 const burger = document.querySelector(".contact__box_burger");
 const nav = document.querySelector(".contact");
@@ -56,3 +84,34 @@ bomb.addEventListener("click", () => {
 
 });
 
+// info
+
+const cross1 = document.querySelector(".section-info__cross_1");
+const cross2 = document.querySelector(".section-info__cross_2");
+const cross3 = document.querySelector(".section-info__cross_3");
+const cross4 = document.querySelector(".section-info__cross_4");
+
+let crossArr = [cross1, cross2, cross3, cross4];
+let elArr = [document.querySelector(".section-info__el_1"), document.querySelector(".section-info__el_2"), document.querySelector(".section-info__el_3"), document.querySelector(".section-info__el_4")]
+
+crossArr.forEach((el, ind) => {
+
+    el.addEventListener("click", () => {
+
+        // crossArr.forEach((cross) => {
+        //     if(cross !== el)
+        //         cross.classList.remove("_active");
+        // });
+
+        el.classList.toggle("_active");
+
+
+        // elArr.forEach((element, index) => {
+        //     if(element !== elArr[ind]) {
+        //         element.classList.remove("_active");
+        //     }
+        // });
+        elArr[ind].classList.toggle("_active");
+    })
+
+})

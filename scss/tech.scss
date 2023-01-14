@@ -63,9 +63,15 @@ html {
     border-radius: 40px;
     font-weight: 600;
     transition: ease 0.3s;
+    background: -webkit-linear-gradient(90deg, #ffde7a,#ffba52,#ffa05c);
+    background: linear-gradient(90deg, #ffde7a,#ffba52,#ffa05c);
     &:hover {
-        transform: translate(0, -10px) scale(1.2, 1.2);
+        transform: translate(0, -10px) scale(1.2, 1.2) skew(3deg, 3deg);
         box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+        background: -webkit-linear-gradient(90deg, #ffde7a,#ffba52,#ffa05c);
+        background: linear-gradient(90deg, #ffde7a,#ffba52,#ffa05c);
+        
 
     }
 }
