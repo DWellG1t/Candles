@@ -94,6 +94,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit; }
 
 /*--------------------*/
+@font-face {
+  font-family: "Marck Script";
+  src: url("/fonts/MarckScript-Regular.ttf"); }
+
+@font-face {
+  font-family: "Zapf ChanceC";
+  src: url("/fonts/ofont.ru_Zapf ChanceC.ttf"); }
+
+@font-face {
+  font-family: "New Standard Old";
+  src: url("/fonts/'ofont.ru_New Standard Old.ttf'"); }
+
+@font-face {
+  font-family: "Monotype Corsiva";
+  src: url("/fonts/monotypecorsiva.ttf"); }
+
 html {
   font-size: 10px;
   font-family: alegreya, roboto, 'Courier New', Courier, monospace !important;
@@ -130,13 +146,13 @@ html {
   border-radius: 40px;
   font-weight: 600;
   transition: ease 0.3s;
-  background: -webkit-linear-gradient(90deg, #ffde7a, #ffba52, #ffa05c);
-  background: linear-gradient(90deg, #ffde7a, #ffba52, #ffa05c); }
+  background: -webkit-linear-gradient(90deg, #ffddbf, #ffc797, #ffb575);
+  background: linear-gradient(90deg, #ffddbf, #ffc797, #ffb575); }
   ._button:hover {
     transform: translate(0, -10px) scale(1.2, 1.2) skew(3deg, 3deg);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    background: -webkit-linear-gradient(90deg, #ffde7a, #ffba52, #ffa05c);
-    background: linear-gradient(90deg, #ffde7a, #ffba52, #ffa05c); }
+    background: -webkit-linear-gradient(90deg, #ffddbf, #ffc797, #ffb575);
+    background: linear-gradient(90deg, #ffddbf, #ffc797, #ffb575); }
 
 a {
   color: inherit; }
@@ -181,7 +197,7 @@ a {
   cursor: pointer;
   position: relative; }
   .contact__box_burger:hover span, .contact__box_burger:hover::before, .contact__box_burger:hover::after {
-    background-color: #ffc26c; }
+    background-color: #ffc592; }
   .contact__box_burger span, .contact__box_burger:before, .contact__box_burger:after {
     position: absolute;
     width: 100%;
@@ -223,7 +239,7 @@ a {
     text-shadow: 0 0 10px black;
     transition: 0.3s ease; }
   .contact__list li:hover {
-    color: #ffc26c;
+    color: #ffc592;
     transform: translate(0, -5px) scale(1.1, 1.1); }
 
 .section-first {
@@ -253,15 +269,15 @@ a {
   border-radius: 40px; }
 
 .section-first__title {
-  -webkit-text-fill-color: white;
   font-size: 6.2rem;
   font-weight: 500;
   text-align: center;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  color: white; }
   .section-first__title span {
-    -webkit-text-fill-color: #ffc26c;
     font-weight: 900;
-    -webkit-text-stroke: 0; }
+    color: #ffc592;
+    font-family: "Monotype Corsiva"; }
 
 .first-section__button {
   background: -webkit-linear-gradient(90deg, #ffde7a, #ffba52, #ffa05c);
@@ -273,8 +289,8 @@ a {
 .section-about {
   box-shadow: 0 -30px 30px rgba(0, 0, 0, 0.7);
   height: 100vh;
-  background: -webkit-linear-gradient(90deg, #ffe6b8, #f8fadb, #ffffff);
-  background: linear-gradient(90deg, #ffe6b8, #f8fadb, #ffffff);
+  background: -webkit-linear-gradient(90deg, #ffddbf, #f8fadb, #ffffff);
+  background: linear-gradient(90deg, #ffddbf, #f8fadb, #ffffff);
   position: relative; }
 
 .section-about._intersection .section-about__container {
@@ -301,7 +317,7 @@ a {
     transition: ease 0.3s; }
   .section-about__toPic:hover {
     transform: translate(-50%, -80px) scale(2, 2);
-    color: #ffc26c; }
+    color: #ffc592; }
     .section-about__toPic:hover::after {
       height: 0; }
 
@@ -323,7 +339,8 @@ a {
 
 .section-about__text_comp {
   font-weight: 900;
-  color: #ffc26c;
+  color: #ffc592;
+  font-family: "Monotype Corsiva";
   font-size: 3.8rem; }
 
 .section-picture {
@@ -360,7 +377,7 @@ a {
     transition: ease 0.3s; }
   .section-picture__toShop:hover {
     transform: translate(-50%, -80px) scale(2, 2);
-    color: #ffc26c; }
+    color: #ffc592; }
     .section-picture__toShop:hover::after {
       height: 0; }
 
@@ -380,7 +397,7 @@ a {
   font-weight: 500;
   transition: ease 0.3s; }
   .section-picture__phone:hover {
-    color: #ffc26c;
+    color: #ffc592;
     transform: translate(0, -10px) scale(1.1, 1.1); }
 
 .section-picture__email {
@@ -389,7 +406,7 @@ a {
   font-weight: 500;
   transition: ease 0.3s; }
   .section-picture__email:hover {
-    color: #ffc26c;
+    color: #ffc592;
     transform: translate(0, -10px) scale(1.1, 1.1); }
 
 .section-picture__social {
@@ -404,22 +421,23 @@ a {
     cursor: pointer;
     transition: ease 0.3s; }
     .section-picture__social div:hover {
-      color: #ffc26c;
+      color: #ffc592;
       transform: translate(0, -10px) scale(1.1, 1.1); }
 
 .section-shop {
   box-shadow: 0 -30px 30px rgba(0, 0, 0, 0.7);
-  background: -webkit-linear-gradient(-90deg, #ffe6b8, #f8fadb, #ffffff);
-  background: linear-gradient(-90deg, #ffe6b8, #f8fadb, #ffffff); }
+  background: -webkit-linear-gradient(-90deg, #ffddbf, #f8fadb, #ffffff);
+  background: linear-gradient(-90deg, #ffddbf, #f8fadb, #ffffff); }
 
 .section-shop._intersection .section-shop__container {
-  animation: appearSide 1.5s ease; }
+  animation: appearSideRev 1.5s ease; }
 
 .section-shop__head {
   font-size: 5.4rem;
   font-weight: 700;
   margin-top: 40px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  font-family: "Monotype Corsiva"; }
   .section-shop__head::after {
     content: "";
     display: block;
@@ -454,7 +472,7 @@ a {
     cursor: pointer; }
     .section-shop__menu li:hover {
       transform: scale(1.2, 1.2);
-      color: #ffc26c; }
+      color: #ffc592; }
     .section-shop__menu li:after {
       content: "";
       display: block;
@@ -468,7 +486,7 @@ a {
       width: 0; }
     .section-shop__menu li:hover:after {
       opacity: 1;
-      background-color: #ffc26c;
+      background-color: #ffc592;
       width: 100%; }
 
 .section-shop__container {
@@ -560,7 +578,7 @@ a {
   font-size: 2.1rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: orange; }
+  color: #ffc592; }
 
 .section-shop__order {
   position: relative;
@@ -575,13 +593,16 @@ a {
   position: relative; }
 
 .section-info__container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   color: white;
   box-sizing: content-box;
   padding: 0 200px; }
+
+.section-info._intersection .section-info__container {
+  animation: appearSide 1.5s ease; }
 
 .section-info__list {
   margin-top: 50px; }
@@ -611,7 +632,7 @@ a {
   position: relative;
   cursor: pointer; }
   .section-info__cross:hover::before, .section-info__cross:hover::after {
-    background-color: #ffc26c; }
+    background-color: #ffc592; }
   .section-info__cross::before, .section-info__cross::after {
     content: "";
     width: 100%;
@@ -654,7 +675,7 @@ a {
     transition: ease 0.3s; }
   .section-info__toShopV2:hover {
     transform: translate(-50%, -80px) scale(2, 2);
-    color: #ffc26c; }
+    color: #ffc592; }
     .section-info__toShopV2:hover::after {
       height: 0; }
 
@@ -666,13 +687,13 @@ a {
 
 @keyframes gradientFlow {
   from {
-    box-shadow: 0 0 0 #ffde7a, 0 0 0 #ffa05c; }
+    box-shadow: 0 0 0 #ffddbf, 0 0 0 #ffb575; }
   to {
-    box-shadow: -7px -7px 0 #ffde7a, 7px 7px 0 #ffa05c; } }
+    box-shadow: -7px -7px 0 #ffddbf, 7px 7px 0 #ffb575; } }
 
 @keyframes firstAppear {
   from {
-    transform: translate(0, -100%);
+    transform: translate(0, -50%);
     opacity: 0; }
   to {
     transform: translate(0, 0);
@@ -680,7 +701,7 @@ a {
 
 @keyframes appearSide {
   from {
-    transform: translate(-100%, 0);
+    transform: translate(-50%, 0);
     opacity: 0; }
   to {
     transform: translate(0, 0);
@@ -688,7 +709,7 @@ a {
 
 @keyframes appearSideRev {
   from {
-    transform: translate(100%, 0);
+    transform: translate(50%, 0);
     opacity: 0; }
   to {
     transform: translate(0, 0);
@@ -744,7 +765,7 @@ a {
     margin-bottom: 30px; }
   .section-about__text_comp {
     font-weight: 900;
-    color: #ffc26c;
+    color: #ffc592;
     font-size: 3.4rem; }
   .section-picture__phone {
     font-size: 3rem; }

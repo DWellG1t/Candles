@@ -57,6 +57,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit; }
 
 /*--------------------*/
+@font-face {
+  font-family: "Marck Script";
+  src: url("/fonts/MarckScript-Regular.ttf"); }
+
+@font-face {
+  font-family: "Zapf ChanceC";
+  src: url("/fonts/ofont.ru_Zapf ChanceC.ttf"); }
+
+@font-face {
+  font-family: "New Standard Old";
+  src: url("/fonts/'ofont.ru_New Standard Old.ttf'"); }
+
+@font-face {
+  font-family: "Monotype Corsiva";
+  src: url("/fonts/monotypecorsiva.ttf"); }
+
 html {
   font-size: 10px;
   font-family: alegreya, roboto, 'Courier New', Courier, monospace !important;
@@ -93,13 +109,13 @@ html {
   border-radius: 40px;
   font-weight: 600;
   transition: ease 0.3s;
-  background: -webkit-linear-gradient(90deg, #ffde7a, #ffba52, #ffa05c);
-  background: linear-gradient(90deg, #ffde7a, #ffba52, #ffa05c); }
+  background: -webkit-linear-gradient(90deg, #ffddbf, #ffc797, #ffb575);
+  background: linear-gradient(90deg, #ffddbf, #ffc797, #ffb575); }
   ._button:hover {
     transform: translate(0, -10px) scale(1.2, 1.2) skew(3deg, 3deg);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    background: -webkit-linear-gradient(90deg, #ffde7a, #ffba52, #ffa05c);
-    background: linear-gradient(90deg, #ffde7a, #ffba52, #ffa05c); }
+    background: -webkit-linear-gradient(90deg, #ffddbf, #ffc797, #ffb575);
+    background: linear-gradient(90deg, #ffddbf, #ffc797, #ffb575); }
 
 a {
   color: inherit; }

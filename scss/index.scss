@@ -161,16 +161,18 @@
 }
 .section-first__title {
     // color: white;
-    -webkit-text-fill-color: white;
+    // -webkit-text-fill-color: white;
     // -webkit-text-stroke: orange 1px;
     font-size: 6.2rem;
     font-weight: 500;
     text-align: center;
     padding-bottom: 100px;
+    color: white;
     span {
-        -webkit-text-fill-color: #ffc26c;
         font-weight: 900;
-        -webkit-text-stroke: 0;
+        color: $font;
+        font-family: $titleFont;
+        // font-style: italic;
     }
 }
 .first-section__button {
@@ -203,8 +205,8 @@
 .section-about {
     box-shadow: 0 -30px 30px rgba(0,0,0,0.7);
     height: 100vh;
-    background: -webkit-linear-gradient(90deg, #ffe6b8,#f8fadb,#ffffff);
-    background: linear-gradient(90deg, #ffe6b8,#f8fadb,#ffffff);
+    background: $webBackGradient;
+    background: $backGradient;
     position: relative;
 }
 .section-about._intersection {
@@ -269,7 +271,8 @@
 }
 .section-about__text_comp {
     font-weight: 900;
-    color: #ffc26c;
+    color: $font;
+    font-family: $titleFont;
     font-size: 3.8rem;
 }
 
@@ -393,13 +396,13 @@
 // section-shop
 .section-shop {
     box-shadow: 0 -30px 30px rgba(0,0,0,0.7);
-    background: -webkit-linear-gradient(-90deg, #ffe6b8,#f8fadb,#ffffff);
-    background: linear-gradient(-90deg, #ffe6b8,#f8fadb,#ffffff);
+    background: $webRevBackGradient;
+    background: $revBackGradient;
 }
 
 .section-shop._intersection {
     .section-shop__container {
-        animation: appearSide 1.5s ease;
+        animation: appearSideRev 1.5s ease;
         
     }
     
@@ -409,6 +412,7 @@
     font-weight: 700;
     margin-top: 40px;
     margin-bottom: 40px;
+    font-family: $titleFont;
     &::after {
         content: "";
         display: block;
@@ -592,7 +596,7 @@
     font-size: 2.1rem;
     font-weight: 600;
     margin-bottom: 5px;
-    color: orange;
+    color: $font;
 }
 .section-shop__order {
     position: relative;
@@ -623,14 +627,24 @@
 }
 .section-info__container {
     
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    
     align-items: flex-start;
     justify-content: center;
     color: white;
     box-sizing: content-box;
     padding: 0 200px;
 }
+
+.section-info._intersection {
+    .section-info__container {
+        animation: appearSide 1.5s ease;
+        
+    }
+    
+}
+
 ._container {
 }
 .section-info__list {
@@ -743,17 +757,17 @@
 // gooo
 @keyframes gradientFlow {
     from {
-        box-shadow: 0 0 0 #ffde7a, 0 0 0 #ffa05c; 
+        box-shadow: 0 0 0 #ffddbf, 0 0 0 #ffb575; 
               
     }
     to {
-        box-shadow: -7px -7px 0 #ffde7a, 7px 7px 0 #ffa05c;  
+        box-shadow: -7px -7px 0 #ffddbf, 7px 7px 0 #ffb575;  
     }
 }
 
 @keyframes firstAppear {
     from {
-        transform: translate(0, -100%);
+        transform: translate(0, -50%);
         opacity: 0;
     }
     to {
@@ -764,7 +778,7 @@
 
 @keyframes appearSide {
     from {
-        transform: translate(-100%, 0);
+        transform: translate(-50%, 0);
         opacity: 0;
     }
     to {
@@ -776,7 +790,7 @@
 
 @keyframes appearSideRev {
     from {
-        transform: translate(100%, 0);
+        transform: translate(50%, 0);
         opacity: 0;
     }
     to {
@@ -908,7 +922,7 @@
     }
     .section-about__text_comp {
         font-weight: 900;
-        color: #ffc26c;
+        color: $font;
         font-size: 3.4rem;
     }
 

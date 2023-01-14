@@ -52,6 +52,7 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(document.querySelector("#about"));
 observer.observe(document.querySelector("#picture"));
 observer.observe(document.querySelector("#shop"));
+observer.observe(document.querySelector("#info"));
 
 // shop nav
 const candleType = document.querySelector(".section-shop__cards_candles");

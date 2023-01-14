@@ -1,8 +1,18 @@
 // Colors
 $button: red;
-$back: red;
-$font: #ffc26c;
+$revBackGradient: linear-gradient(-90deg, #ffddbf,#f8fadb,#ffffff);
+$webRevBackGradient: -webkit-linear-gradient(-90deg, #ffddbf,#f8fadb,#ffffff);
+
+$backGradient: linear-gradient(90deg, #ffddbf,#f8fadb,#ffffff);
+$webBackGradient: -webkit-linear-gradient(90deg, #ffddbf,#f8fadb,#ffffff);
+
+
+
+// $font: #ffc26c;
+$font: #ffc592;
 $subFont: rgb(112, 112, 112);
 
+// font
+$titleFont: "Monotype Corsiva";
 // Margin
 $sectionMargin: 80px;
